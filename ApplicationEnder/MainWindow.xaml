@@ -1,0 +1,45 @@
+﻿<Window x:Class="ApplicationEnder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApplicationEnder"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="ProcessEnder" Height="250.667" Width="458" Background="#FF5D5D5D" Foreground="White" Visibility="Visible">
+    
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Click="ProcessKiller" Content="STOP" Grid.Column="1" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="205" RenderTransformOrigin="0.373,0.45" Foreground="White" BorderBrush="#FF374D8F" Background="#FF5676D4" FontWeight="Bold" Height="163" FontSize="32">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="1"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Label Content="Stop All non Windows processes" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.342,0.346" Width="205" Foreground="White" FontWeight="Bold"/>
+        <Label Content="[WP] - Windows processes" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.342,0.346" Width="205" Foreground="White" FontWeight="Bold"/>
+
+        <RichTextBox Name="RichTextBox1" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left" Height="163" Margin="10,42,0,17"  Width="205" Background="#FF535353" BorderBrush="#FF374D8F" FontSize="13" Foreground="#FFD3DEFF">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="" TextDecorations="Underline"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
